@@ -5,6 +5,18 @@ from sonarqube.utils.rest_client import RestClient
 from sonarqube.utils.config import (
     API_ISSUES_SEARCH_ENDPOINT,
     API_ISSUES_ASSIGN_ENDPOINT,
+    API_ISSUES_ADD_COMMENT_ENDPOINT,
+    API_ISSUES_AUTHORS_ENDPOINT,
+    API_ISSUES_BULK_CHANGE_ENDPOINT,
+    API_ISSUES_CHANGELOG_ENDPOINT,
+    API_ISSUES_DELETE_COMMENT_ENDPOINT,
+    API_ISSUES_EDIT_COMMENT_ENDPOINT,
+    API_ISSUES_DO_TRANS_ENDPOINT,
+    API_ISSUES_REINDEX_ENDPOINT,
+    API_ISSUES_SEVERITY_ENDPOINT,
+    API_ISSUES_SET_TAGS_ENDPOINT,
+    API_ISSUES_SET_TYPE_ENDPOINT,
+    API_ISSUES_TAGS_ENDPOINT,
 )
 from sonarqube.utils.common import GET, POST
 
@@ -218,6 +230,150 @@ class SonarQubeIssues(RestClient):
 
     @POST(API_ISSUES_ASSIGN_ENDPOINT)
     def issue_assign(self, issue, assignee=None):
+        """
+        SINCE 3.6
+        Assign/Unassign an issue
+
+        :param issue: Issue key
+        :param assignee: Login of the assignee. When not set, it will unassign the issue. Use '_me' to
+          assign to current user
+        :return: request response
+        """
+
+    @POST(API_ISSUES_ADD_COMMENT_ENDPOINT)
+    def add_comment(self, issue, text):
+        """
+        SINCE 3.6
+        Assign/Unassign an issue
+
+        :param issue: Issue key
+        :param assignee: Login of the assignee. When not set, it will unassign the issue. Use '_me' to
+          assign to current user
+        :return: request response
+        """
+
+    @GET(API_ISSUES_AUTHORS_ENDPOINT)
+    def search_authors(self, project=None, ps=None, q=None):
+        """
+        SINCE 3.6
+        Assign/Unassign an issue
+
+        :param issue: Issue key
+        :param assignee: Login of the assignee. When not set, it will unassign the issue. Use '_me' to
+          assign to current user
+        :return: request response
+        """
+
+    @POST(API_ISSUES_BULK_CHANGE_ENDPOINT)
+    def bulk_change(self, add_tags=None, assign=None, comment=None, do_transition=None, issues, remove_tags=None, sendNotification=None, set_severity=None, set_type=None):
+        """
+        SINCE 3.6
+        Assign/Unassign an issue
+
+        :param issue: Issue key
+        :param assignee: Login of the assignee. When not set, it will unassign the issue. Use '_me' to
+          assign to current user
+        :return: request response
+        """
+
+    @GET(API_ISSUES_CHANGELOG_ENDPOINT)
+    def get_changelog(self, issues):
+        """
+        SINCE 3.6
+        Assign/Unassign an issue
+
+        :param issue: Issue key
+        :param assignee: Login of the assignee. When not set, it will unassign the issue. Use '_me' to
+          assign to current user
+        :return: request response
+        """
+
+    @POST(API_ISSUES_DELETE_COMMENT_ENDPOINT)
+    def delete_comment(self, comment):
+        """
+        SINCE 3.6
+        Assign/Unassign an issue
+
+        :param issue: Issue key
+        :param assignee: Login of the assignee. When not set, it will unassign the issue. Use '_me' to
+          assign to current user
+        :return: request response
+        """
+
+    @POST(API_ISSUES_DO_TRANS_ENDPOINT)
+    def do_transition(self, issue, transition):
+        """
+        SINCE 3.6
+        Assign/Unassign an issue
+
+        :param issue: Issue key
+        :param assignee: Login of the assignee. When not set, it will unassign the issue. Use '_me' to
+          assign to current user
+        :return: request response
+        """
+
+    @POST(API_ISSUES_EDIT_COMMENT_ENDPOINT)
+    def edit_comment(self, comment, text):
+        """
+        SINCE 3.6
+        Assign/Unassign an issue
+
+        :param issue: Issue key
+        :param assignee: Login of the assignee. When not set, it will unassign the issue. Use '_me' to
+          assign to current user
+        :return: request response
+        """
+
+    @POST(API_ISSUES_REINDEX_ENDPOINT)
+    def reindex(self, project):
+        """
+        SINCE 3.6
+        Assign/Unassign an issue
+
+        :param issue: Issue key
+        :param assignee: Login of the assignee. When not set, it will unassign the issue. Use '_me' to
+          assign to current user
+        :return: request response
+        """
+
+    @POST(API_ISSUES_SEVERITY_ENDPOINT)
+    def set_severity(self, issue, severity):
+        """
+        SINCE 3.6
+        Assign/Unassign an issue
+
+        :param issue: Issue key
+        :param assignee: Login of the assignee. When not set, it will unassign the issue. Use '_me' to
+          assign to current user
+        :return: request response
+        """
+
+    @POST(API_ISSUES_SET_TAGS_ENDPOINT)
+    def set_tags(self, issue, tags=None):
+        """
+        SINCE 3.6
+        Assign/Unassign an issue
+
+        :param issue: Issue key
+        :param assignee: Login of the assignee. When not set, it will unassign the issue. Use '_me' to
+          assign to current user
+        :return: request response
+        """
+
+    @POST(API_ISSUES_SET_TYPE_ENDPOINT)
+    def set_type(self, issue, type):
+        """
+        SINCE 3.6
+        Assign/Unassign an issue
+
+        :param issue: Issue key
+        :param assignee: Login of the assignee. When not set, it will unassign the issue. Use '_me' to
+          assign to current user
+        :return: request response
+        """
+
+    @GET(API_ISSUES_TAGS_ENDPOINT)
+    def list_tags(self, all=None, branch=None, ps=None, q=None):
         """
         SINCE 3.6
         Assign/Unassign an issue

@@ -6,6 +6,24 @@ from sonarqube.utils.config import (
     API_QUALITYPROFILES_ACTIVATE_RULE_ENDPOINT,
     API_QUALITYPROFILES_SEARCH_ENDPOINT,
     API_QUALITYPROFILES_DELETE_ENDPOINT,
+    API_QUALITYPROFILES_ACTIVATE_RULES_ENDPOINT,
+    API_QUALITYPROFILES_ADD_PROJECT_ENDPOINT,
+    API_QUALITYPROFILES_BACKUP_ENDPOINT,
+    API_QUALITYPROFILES_CHANGE_PARENT_ENDPOINT,
+    API_QUALITYPROFILES_CHANGELOG_ENDPOINT,
+    API_QUALITYPROFILES_COPY_ENDPOINT,
+    API_QUALITYPROFILES_DEACTIVE_RULE_ENDPOINT,
+    API_QUALITYPROFILES_DEACTIVE_RULES_ENDPOINT,
+    API_QUALITYPROFILES_EXPORT_ENDPOINT,
+    API_QUALITYPROFILES_EXPORTERS_ENDPOINT,
+    API_QUALITYPROFILES_IMPORTERS_ENDPOINT,
+    API_QUALITYPROFILES_INHERITANCE_ENDPOINT,
+    API_QUALITYPROFILES_PROJECTS_ENDPOINT,
+    API_QUALITYPROFILES_REMOVE_PROJECT_ENDPOINT,
+    API_QUALITYPROFILES_RENAME_ENDPOINT,
+    API_QUALITYPROFILES_RESTORE_ENDPOINT,
+    API_QUALITYPROFILES_CREATE_ENDPOINT,
+    API_QUALITYPROFILES_SET_DEFAULT_ENDPOINT,
 )
 from sonarqube.utils.common import GET, POST
 
@@ -76,6 +94,7 @@ class SonarQubeQualityProfiles(RestClient):
         :param qualityProfile: Quality profile name
         :return:
         """
+
     @POST(API_QUALITYPROFILES_DELETE_ENDPOINT)
     def delete_quality_profile(self, language, qualityProfile, organization=None):
         """
@@ -88,3 +107,314 @@ class SonarQubeQualityProfiles(RestClient):
         :param organization: Organization key.
         :return:
         """
+
+    @POST(API_QUALITYPROFILES_ACTIVATE_RULES_ENDPOINT)
+    def activate_rules_for_quality_profile(
+        self, activation=None, active_severities=None, asc=None, available_since=None, cwe=None,
+        inheritence=None, is_template=None, languages=None, owaspTop10=None, q=none, qprofile=None,
+        rule_key=None, s=None, sansTop25=None, severities=None, sonarsourceSecurity, statuses=None,
+        tags=None, targetKey, targetSeverity=None, template_key=None, types=None
+    ):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @POST(API_QUALITYPROFILES_ADD_PROJECT_ENDPOINT)
+    def add_project(self, language, project, qualityProfile):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @GET(API_QUALITYPROFILES_BACKUP_ENDPOINT)
+    def backup_quality_profile(self, language, qualityProfile):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @POST(API_QUALITYPROFILES_CHANGE_PARENT_ENDPOINT)
+    def change_parent(self, language, parentQualityProfile=None, qualityProfile):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @GET(API_QUALITYPROFILES_CHANGELOG_ENDPOINT)
+    def get_changelog(self, language, p=None, ps=None, since=None, to=None, qualityProfile):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @POST(API_QUALITYPROFILES_COPY_ENDPOINT)
+    def copy_quality_profile(self, fromKey, toName):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @POST(API_QUALITYPROFILES_CREATE_ENDPOINT)
+    def create_quality_profile(self, language, name):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @POST(API_QUALITYPROFILES_DEACTIVE_RULE_ENDPOINT)
+    def deactivate_rule_for_quality_profile(self, key, rule):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @POST(API_QUALITYPROFILES_DEACTIVE_RULES_ENDPOINT)
+    def deactivate_rules_for_quality_profile(
+        self, activation=None, active_severities=None, asc=None, available_since=None, cwe=None,
+        inheritence=None, is_template=None, languages=None, owaspTop10=None, q=none, qprofile=None,
+        rule_key=None, s=None, sansTop25=None, severities=None, sonarsourceSecurity, statuses=None,
+        tags=None, targetKey, targetSeverity=None, template_key=None, types=None
+    ):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @POST(API_QUALITYPROFILES_DELETE_ENDPOINT)
+    def delete_quality_profile(self, language, qualityProfile):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @GET(API_QUALITYPROFILES_EXPORT_ENDPOINT)
+    def export_quality_profile(self, language, qualityProfile=None, exporterKey=None):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @GET(API_QUALITYPROFILES_EXPORTERS_ENDPOINT)
+    def get_exporters(self):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @GET(API_QUALITYPROFILES_EXPORTERS_ENDPOINT)
+    def get_exporters(self):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @GET(API_QUALITYPROFILES_IMPORTERS_ENDPOINT)
+    def get_importers(self):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @GET(API_QUALITYPROFILES_INHERITANCE_ENDPOINT)
+    def get_inheritance(self, language, qualityProfile):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @GET(API_QUALITYPROFILES_PROJECTS_ENDPOINT)
+    def get_projects(self, key, p=None, ps=None, q=None, selected=None):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @POST(API_QUALITYPROFILES_REMOVE_PROJECT_ENDPOINT)
+    def remove_project(self, language, project, qualityProfile):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @POST(API_QUALITYPROFILES_RENAME_ENDPOINT)
+    def rename_quality_profile(self, key, name):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @POST(API_QUALITYPROFILES_RESTORE_ENDPOINT)
+    def restore_quality_profile(self, backup):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+
+    @POST(API_QUALITYPROFILES_SET_DEFAULT_ENDPOINT)
+    def set_default_quality_profile(self, language, qualityProfile):
+        """
+        SINCE 5.2
+        Search quality profiles
+
+        :param organization: organization key.
+        :param defaults: If set to true, return only the quality profiles marked as default for each language.
+          Possible values are for: true or false. default value is false.
+        :param language: Language key. If provided, only profiles for the given language are returned.
+        :param project: Project key
+        :param qualityProfile: Quality profile name
+        :return:
+        """
+

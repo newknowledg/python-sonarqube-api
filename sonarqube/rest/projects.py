@@ -4,6 +4,13 @@
 from sonarqube.utils.rest_client import RestClient
 from sonarqube.utils.config import (
     API_PROJECTS_SEARCH_ENDPOINT,
+    API_PROJECTS_BULK_DELETE_ENDPOINT,
+    API_PROJECTS_CREATE_ENDPOINT,
+    API_PROJECTS_DELETE_ENDPOINT,
+    API_PROJECTS_EXPORT_FINDINGS_ENDPOINT,
+    API_PROJECTS_LICENSE_USAGE_ENDPOINT,
+    API_PROJECTS_UPDATE_KEY_ENDPOINT,
+    API_PROJECTS_UPDATE_VISIBILITY_ENDPOINT,
 )
 from sonarqube.utils.common import GET, POST
 
@@ -46,24 +53,82 @@ class SonarQubeProjects(RestClient):
         SINCE 6.3
         Search for projects or views to administrate them.
 
-        :param organization: The key of the organization
-        :param analyzedBefore: Filter the projects for which last analysis is older than the given date (exclusive).
-          Either a date (server timezone) or datetime can be provided.
-        :param onProvisionedOnly: Filter the projects that are provisioned.
-          Possible values are for: true or false. default value is false.
-        :param projects: Comma-separated list of project keys
-        :param p: page number.
-        :param ps: Page size. Must be greater than 0 and less or equal than 500
-        :param q:
-          Limit search to:
-            * component names that contain the supplied string
-            * component keys that contain the supplied string
-        :param qualifiers: Comma-separated list of component qualifiers. Filter the results with the specified
-          qualifiers. Possible values are for:
-            * TRK
-            * VW
-            * APP
-          default value is TRK.
+        :return:
+        """
+
+    @POST(API_PROJECTS_BULK_DELETE_ENDPOINT)
+    def bulk_delete(
+        self,
+        mainBranch=None,
+        name,
+        projects,
+        visibility=None,
+    ):
+        """
+        SINCE 6.3
+        Search for projects or views to administrate them.
+
+        :return:
+        """
+
+    @POST(API_PROJECTS_DELETE_ENDPOINT)
+    def delete(
+        self,
+        project,
+    ):
+        """
+        SINCE 6.3
+        Search for projects or views to administrate them.
+
+        :return:
+        """
+
+    @GET(API_PROJECTS_EXPORT_FINDINGS_ENDPOINT)
+    def export_findings(
+        self,
+        project,
+        pullRequest=None
+    ):
+        """
+        SINCE 6.3
+        Search for projects or views to administrate them.
+
+        :return:
+        """
+
+    @GET(API_PROJECTS_LICENSE_USAGE_ENDPOINT)
+    def licecnse_usage(
+        self,
+    ):
+        """
+        SINCE 6.3
+        Search for projects or views to administrate them.
+
+        :return:
+        """
+
+    @POST(API_PROJECTS_UPDATE_KEY_ENDPOINT)
+    def update_key(
+        self,
+        from,
+        to,
+    ):
+        """
+        SINCE 6.3
+        Search for projects or views to administrate them.
+
+        :return:
+        """
+
+    @POST(API_PROJECTS_UPDATE_VISIBILITY_ENDPOINT)
+    def update_visibility(
+        self,
+        project,
+        visibility,
+    ):
+        """
+        SINCE 6.3
+        Search for projects or views to administrate them.
 
         :return:
         """

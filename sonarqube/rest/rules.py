@@ -5,6 +5,11 @@ from sonarqube.utils.rest_client import RestClient
 from sonarqube.utils.config import (
     API_RULES_SEARCH_ENDPOINT,
     API_RULES_CREATE_ENDPOINT,
+    API_RULES_DELETE_ENDPOINT,
+    API_RULES_REPOSITORIES_ENDPOINT,
+    API_RULES_SHOW_ENDPOINT,
+    API_RULES_TAGS_ENDPOINT,
+    API_RULES_UPDATE_ENDPOINT,
 )
 from sonarqube.utils.common import GET, POST
 
@@ -252,6 +257,79 @@ class SonarQubeRules(RestClient):
             * VULNERABILITY
             * SECURITY_HOTSPOT
         :param params: Parameters as semi-colon list of =, for example 'params=key1=v1;key2=v2' (Only for custom rule)
+
+        :return: request response
+        """
+
+    @POST(API_RULES_DELETE_ENDPOINT)
+    def delete_rule(
+        self,
+        key,
+    ):
+        """
+        SINCE 4.4
+        Create a a custom rule.
+
+        :return: request response
+        """
+
+    @GET(API_RULES_REPOSITORIES_ENDPOINT)
+    def get_rule_repositories(
+        self,
+        language=None,
+        q=None,
+    ):
+        """
+        SINCE 4.4
+        Create a a custom rule.
+
+        :return: request response
+        """
+
+    @GET(API_RULES_SHOW_ENDPOINT)
+    def show_rule(
+        self,
+        actives=None,
+        key,
+    ):
+        """
+        SINCE 4.4
+        Create a a custom rule.
+
+        :return: request response
+        """
+
+    @GET(API_RULES_TAGS_ENDPOINT)
+    def get_tags(
+        self,
+        ps=None,
+        q=None,
+    ):
+        """
+        SINCE 4.4
+        Create a a custom rule.
+
+        :return: request response
+        """
+
+    @POST(API_RULES_UPDATE_ENDPOINT)
+    def update_rule(
+        self,
+        key,
+        mardown_description=None,
+        mardown_note=None,
+        name=None,
+        params=None,
+        remediation_fn_base_effort=None,
+        remediation_fn_type=None,
+        remediation_fy_gap_multiplier=None,
+        severity=None,
+        status=None,
+        tags=None,
+    ):
+        """
+        SINCE 4.4
+        Create a a custom rule.
 
         :return: request response
         """

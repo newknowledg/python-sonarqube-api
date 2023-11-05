@@ -72,3 +72,40 @@ class SonarQubeCe(RestClient):
 
         :return:
         """
+
+    @GET(API_CE_ACTIVITY_STATUS_ENDPOINT)
+    def get_activity_status(
+        self,
+        component=None
+    ):
+        """
+        SINCE 5.2
+        Search for tasks.
+
+        :return:
+        """
+
+    @GET(API_CE_ACTIVITY_STATUS_ENDPOINT)
+    def get_component(
+        self,
+        component=None
+    ):
+        """
+        SINCE 5.2
+        Search for tasks.
+
+        :return:
+        """
+
+    @GET(API_CE_TASK_ENDPOINT)
+    def get_task(
+        self,
+        additionalFields=None,
+        id
+    ):
+        """
+        SINCE 5.2
+        Search for tasks.
+
+        :return:
+        """

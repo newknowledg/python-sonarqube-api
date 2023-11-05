@@ -5,6 +5,9 @@ from sonarqube.utils.rest_client import RestClient
 from sonarqube.utils.config import (
     API_PROJECT_ANALYSES_DELETE_ENDPOINT,
     API_PROJECT_ANALYSES_SEARCH_ENDPOINT,
+    API_PROJECT_ANALYSES_CREATE_EVENT_ENDPOINT,
+    API_PROJECT_ANALYSES_DELETE_EVENT_ENDPOINT,
+    API_PROJECT_ANALYSES_UPDATE_EVENT_ENDPOINT,
 )
 from sonarqube.utils.common import GET, POST
 
@@ -58,3 +61,34 @@ class SonarQubeProjectAnalyses(RestClient):
         :param ps: Page size. Must be greater than 0 and less or equal than 500
         :return:
         """
+
+    @POST(API_PROJECT_ANALYSES_CREATE_EVENT_ENDPOINT)
+    def create_event(self, analysis, category=None, name):
+        """
+        SINCE 6.3
+        Delete a project analysis.
+
+        :param analysis: Analysis key
+        :return:
+        """
+
+    @POST(API_PROJECT_ANALYSES_DELETE_EVENT_ENDPOINT)
+    def delete_event(self, event):
+        """
+        SINCE 6.3
+        Delete a project analysis.
+
+        :param analysis: Analysis key
+        :return:
+        """
+
+    @POST(API_PROJECT_ANALYSES_UPDATE_EVENT_ENDPOINT)
+    def update_event(self, event, name):
+        """
+        SINCE 6.3
+        Delete a project analysis.
+
+        :param analysis: Analysis key
+        :return:
+        """
+

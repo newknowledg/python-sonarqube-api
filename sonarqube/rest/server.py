@@ -2,11 +2,16 @@
 # -*- coding:utf-8 -*-
 # @Author: Jialiang Shi
 from sonarqube.utils.rest_client import RestClient
-from sonarqube.utils.config import API_SERVER_VERSION_ENDPOINT
-from sonarqube.utils.common import GET
+from sonarqube.utils.config import (
+    API_SETTINGS_LIST_DEFINITIONS_ENDPOINT,
+    API_SETTINGS_RESET_ENDPOINT,
+    API_SETTINGS_SET_ENDPOINT,
+    API_SETTINGS_VALUES_ENDPOINT,
+)
+from sonarqube.utils.common import GET, POST
 
 
-class SonarQubeServer(RestClient):
+class SonarQubeSettings(RestClient):
     """
     SonarQube server Operations
     """
@@ -16,7 +21,7 @@ class SonarQubeServer(RestClient):
 
         :param kwargs:
         """
-        super(SonarQubeServer, self).__init__(**kwargs)
+        super(SonarQubeSettings, self).__init__(**kwargs)
 
     @GET(API_SERVER_VERSION_ENDPOINT)
     def get_server_version(self):

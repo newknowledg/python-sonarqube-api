@@ -28,3 +28,21 @@ class SonarQubeAuth(RestClient):
 
         :return:
         """
+
+    @POST(API_AUTH_LOGIN_ENDPOINT)
+    def check_credentials(self):
+        """
+        SINCE 3.3
+        Check credentials.
+
+        :return:
+        """
+
+    @POST(API_AUTH_LOGOUT_ENDPOINT)
+    def check_credentials(self):
+        """
+        SINCE 3.3
+        Check credentials.
+
+        :return:
+        """

@@ -6,6 +6,18 @@ from sonarqube.utils.config import (
     API_QUALITYGATES_LIST_ENDPOINT,
     API_QUALITYGATES_SELECT_ENDPOINT,
     API_QUALITYGATES_SEARCH_ENDPOINT,
+    API_QUALITYGATES_COPY_ENDPOINT,
+    API_QUALITYGATES_CREATE_ENDPOINT,
+    API_QUALITYGATES_CREATE_CONDITION_ENDPOINT,
+    API_QUALITYGATES_DELETE_CONDITION_ENDPOINT,
+    API_QUALITYGATES_DESELECT_ENDPOINT,
+    API_QUALITYGATES_DESTROY_ENDPOINT,
+    API_QUALITYGATES_GET_BY_PROJECT_ENDPOINT,
+    API_QUALITYGATES_PROJECT_STATUS_ENDPOINT,
+    API_QUALITYGATES_RENAME_ENDPOINT,
+    API_QUALITYGATES_SET_AS_DEFAULT_ENDPOINT,
+    API_QUALITYGATES_SHOW_ENDPOINT,
+    API_QUALITYGATES_UPDATE_CONDITION_ENDPOINT,
 )
 from sonarqube.utils.common import GET, POST
 
@@ -45,6 +57,7 @@ class SonarQubeQualityGates(RestClient):
         :param pageSize: Page size.
         :return:
         """
+
     @GET(API_QUALITYGATES_LIST_ENDPOINT)
     def get_quality_gates(self, organization=None):
         """
@@ -66,3 +79,100 @@ class SonarQubeQualityGates(RestClient):
         :param organization: Organization key. If no organization is provided, the default organization is used.
         :return:
         """
+
+    @POST(API_QUALITYGATES_COPY_ENDPOINT)
+    def copy(self, sourceName=None, name):
+        """
+        SINCE 4.3
+        Associate a project to a quality gate.
+
+        """
+
+    @POST(API_QUALITYGATES_CREATE_ENDPOINT)
+    def create(self, name):
+        """
+        SINCE 4.3
+        Associate a project to a quality gate.
+
+        """
+
+    @POST(API_QUALITYGATES_CREATE_CONDITION_ENDPOINT)
+    def create_condition(self, error, gateName=None, metric, op=None):
+        """
+        SINCE 4.3
+        Associate a project to a quality gate.
+
+        """
+
+    @POST(API_QUALITYGATES_DELETE_CONDITION_ENDPOINT)
+    def delete_condition(self, id):
+        """
+        SINCE 4.3
+        Associate a project to a quality gate.
+
+        """
+
+    @POST(API_QUALITYGATES_DESELECT_ENDPOINT)
+    def deselect(self, projectKey):
+        """
+        SINCE 4.3
+        Associate a project to a quality gate.
+
+        """
+
+    @POST(API_QUALITYGATES_DESTROY_ENDPOINT)
+    def destroy(self, name=None):
+        """
+        SINCE 4.3
+        Associate a project to a quality gate.
+
+        """
+
+    @GET(API_QUALITYGATES_GET_BY_PROJECT_ENDPOINT)
+    def get_by_project(self, project):
+        """
+        SINCE 4.3
+        Associate a project to a quality gate.
+
+        """
+
+    @GET(API_QUALITYGATES_PROJECT_STATUS_ENDPOINT)
+    def get_project_status(self, analysisId=None, branch=None, projectId=None, projectKey=None, PullRequest=None):
+        """
+        SINCE 4.3
+        Associate a project to a quality gate.
+
+        """
+
+    @POST(API_QUALITYGATES_RENAME_ENDPOINT)
+    def rename(self, currentName=None, name):
+        """
+        SINCE 4.3
+        Associate a project to a quality gate.
+
+        """
+
+    @POST(API_QUALITYGATES_SET_AS_DEFAULT_ENDPOINT)
+    def set_as_default(self, name=None):
+        """
+        SINCE 4.3
+        Associate a project to a quality gate.
+
+        """
+
+    @GET(API_QUALITYGATES_SHOW_ENDPOINT)
+    def show_gate(self, id=None, name=None):
+        """
+        SINCE 4.3
+        Associate a project to a quality gate.
+
+        """
+
+    @POST(API_QUALITYGATES_UPDATE_CONDITION_ENDPOINT)
+    def uodate_condition(self, error, id, metric, op=None):
+        """
+        SINCE 4.3
+        Associate a project to a quality gate.
+
+        """
+

@@ -4,6 +4,8 @@
 from sonarqube.utils.rest_client import RestClient
 from sonarqube.utils.config import (
     API_FAVORITES_SEARCH_ENDPOINT,
+    API_FAVORITES_ADD_ENDPOINT,
+    API_FAVORITES_REMOVE_ENDPOINT,
 )
 from sonarqube.utils.common import GET, POST
 
@@ -22,6 +24,28 @@ class SonarQubeFavorites(RestClient):
 
     @GET(API_FAVORITES_SEARCH_ENDPOINT)
     def search_favorites(self, p=None, ps=None):
+        """
+        SINCE 6.3
+        Search for the authenticated user favorites.
+        :param p: page number.
+        :param ps: Page size. Must be greater than 0 and less or equal than 500
+
+        :return:
+        """
+
+    @POST(API_FAVORITES_ADD_ENDPOINT)
+    def add_favorites(self, component):
+        """
+        SINCE 6.3
+        Search for the authenticated user favorites.
+        :param p: page number.
+        :param ps: Page size. Must be greater than 0 and less or equal than 500
+
+        :return:
+        """
+
+    @POST(API_FAVORITES_REMOVE_ENDPOINT)
+    def remove_favorites(self, component):
         """
         SINCE 6.3
         Search for the authenticated user favorites.
