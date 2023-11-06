@@ -15,6 +15,23 @@ from sonarqube.rest.ce import SonarQubeCe
 from sonarqube.rest.project_branches import SonarQubeProjectBranches
 from sonarqube.rest.qualitygates import SonarQubeQualityGates
 from sonarqube.rest.rules import SonarQubeRules
+from sonarqube.rest.alm_integrations import SonarQubeAlmIntegrations
+from sonarqube.rest.alm_settings import SonarQubeAlmSettings
+from sonarqube.rest.analysis import SonarQubeAnalysisCache
+from sonarqube.rest.applications import SonarQubeApplications
+from sonarqube.rest.audit_logs import SonarQubeAuditLogs
+from sonarqube.rest.components import SonarQubeComponent
+from sonarqube.rest.hotspots import SonarQubeHotSpots
+from sonarqube.rest.monitoring import SonarQubeMonitoring
+from sonarqube.rest.new_code_periods import SonarQubeNewCodePeriods
+from sonarqube.rest.notifications import SonarQubeNotifications
+from sonarqube.rest.permissions import SonarQubePermissions
+from sonarqube.rest.plugins import SonarQubePlugins
+from sonarqube.rest.sources import SonarQubeSources
+from sonarqube.rest.system import SonarQubeSytem
+from sonarqube.rest.webservices import SonarQubeWebServices
+from sonarqube.rest.webhooks import SonarQubeWebHooks
+from sonarqube.rest.project_pull_requests import SonarQubePullRequests
 from sonarqube.rest.qualityprofiles import SonarQubeQualityProfiles
 from sonarqube.rest.duplications import SonarQubeDuplications
 from sonarqube.rest.metrics import SonarQubeMetrics
@@ -283,6 +300,142 @@ class SonarQubeClient:
 
         """
         return SonarQubeViews(api=self)
+
+    @property
+    def alm_integrations(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeAlmIntegrations(api=self)
+
+    @property
+    def alm_settings(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeAlmSettings(api=self)
+
+    @property
+    def analysis(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeAnalysisCache(api=self)
+
+    @property
+    def applications(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeApplications(api=self)
+
+    @property
+    def audit_logs(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeAuditLogs(api=self)
+
+    @property
+    def components(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeComponent(api=self)
+
+    @property
+    def hotspots(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeHotSpots(api=self)
+
+    @property
+    def monitoring(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeMonitoring(api=self)
+
+    @property
+    def new_code_periods(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeNewCodePeriods(api=self)
+
+    @property
+    def notifications(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeNotifications(api=self)
+
+    @property
+    def permissions(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubePermissions(api=self)
+
+    @property
+    def plugins(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubePlugins(api=self)
+
+    @property
+    def sources(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeSources(api=self)
+
+    @property
+    def system(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeSytem(api=self)
+
+    @property
+    def webservices(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeWebServices(api=self)
+
+    @property
+    def webhooks(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubeWebHooks(api=self)
+
+    @property
+    def project_pull_requests(self):
+        """
+        Manage Portfolios
+
+        """
+        return SonarQubePullRequests(api=self)
 
 
 class SonarEnterpriseClient(SonarQubeClient):
